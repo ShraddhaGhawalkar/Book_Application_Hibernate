@@ -23,9 +23,13 @@ Before you run this application, make sure you have the following prerequisites 
 ## Demonstration Queries
 # 1. Insertion
 Book b = new Book();
+
 b.setBname("Java");
+
 b.setBprice(400);
+
 session.save(b);
+
 t.commit();
 
 
