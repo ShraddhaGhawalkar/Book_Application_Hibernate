@@ -28,5 +28,52 @@ b.setBprice(400);
 session.save(b);
 t.commit();
 
+# 2. Update
+Query q = session.createQuery("update Book set bname=:n,bprice=:p where bcode=:c");
+q.setParameter("n", "python");
+q.setParameter("p", 800);
+q.setParameter("c", 2);
+int i = q.executeUpdate();
+t.commit();
+
+# 3. Delete
+Query q = session.createQuery("delete from Book where bcode=:c");
+q.setParameter("c", 2);
+int i = q.executeUpdate();
+t.commit();
+
+# 4. Display Records
+Query q = session.createQuery("from Book");
+List li = q.list();
+for (Object b : li) {
+    Book x = (Book) b;
+    System.out.println(x.getBcode() + " " + x.getBname() + " " + x.getBprice());
+}
+
+# 5. Use of setFirstResult() and setMaxResults()
+Query q = session.createQuery("from Book");
+q.setFirstResult(0); // Row starts from 0
+q.setMaxResults(2);
+List li = q.list();
+for (Object b : li) {
+    Book x = (Book) b;
+    System.out.println(x.getBcode() + " " + x.getBname() + " " + x.getBprice());
+}
+
+# 6. Find Book Records with Price >= 700
+Criteria ct = session.createCriteria(Book.class);
+ct.add(Restrictions.ge("bprice", 700));
+List li = ct.list();
+for (Object b : li) {
+    Book x = (Book) b;
+    System.out.println(x.getBcode() + " " + x.getBname() + " " + x.getBprice());
+}
+
+ # 7. Display Book Record with Highest Price
+Query q = session.createQuery("select max(bprice) from Book");
+List li = q.list();
+System.out.println(li.get(0));
+
+
 
 
