@@ -12,7 +12,7 @@ Before you run this application, make sure you have the following prerequisites 
 
 # Usage
 1. Clone this repository to your local machine using the following command:
--> git clone https://
+-> git clone https://github.com/ShraddhaGhawalkar/Book_Application_Hibernate
 
 3. Open the project in your favorite Java IDE.
 4. Ensure that you have set up the hibernate.cfg.xml file correctly with your database connection details.
