@@ -12,13 +12,13 @@ Before you run this application, make sure you have the following prerequisites 
 
 # Usage
 1. Clone this repository to your local machine using the following command:
--> git clone https://github.com/ShraddhaGhawalkar/HQLpack.git
+-> git clone https://
 
-2. Open the project in your favorite Java IDE.
-3. Ensure that you have set up the hibernate.cfg.xml file correctly with your database connection details.
-4. Run the Bookmain.java file.
-5. Uncomment and modify the code within the main method to test different HQL queries. The code is provided with comments for insertion, update, delete, and retrieval operations.
-6. Compile and run the Bookmain.java file to see the results of the HQL queries.
+3. Open the project in your favorite Java IDE.
+4. Ensure that you have set up the hibernate.cfg.xml file correctly with your database connection details.
+5. Run the Bookmain.java file.
+6. Uncomment and modify the code within the main method to test different HQL queries. The code is provided with comments for insertion, update, delete, and retrieval operations.
+7. Compile and run the Bookmain.java file to see the results of the HQL queries.
 
 ## Demonstration Queries
 # 1. Insertion
